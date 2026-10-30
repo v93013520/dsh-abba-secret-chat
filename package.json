@@ -1,6 +1,6 @@
 {
   "name": "dsh-abba-secret-chat",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "AB-BA 秘密对话：装进 DeepSeek Harness 右侧栏的一次性双人密码聊天，端到端加密（服务器只见密文），支持图片与截屏、我/你标签，结束即彻底清理。 · One-off two-person password chat for DeepSeek Harness: end-to-end encrypted, docked in the right sidebar, images/screenshots, cleared on end.",
   "keywords": [
     "dsh",

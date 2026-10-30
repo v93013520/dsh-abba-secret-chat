@@ -147,26 +147,25 @@ footer{text-align:center;color:#9aa3ba;font-size:12px;margin-top:18px}
       </svg>
     </div>
     <h1>密码碰头</h1>
-    <p class="sub">两个密码都填对，才能碰上头 · 端到端加密 · 聊完即焚</p>
+    <p class="sub">端到端加密 · 聊完即焚</p>
   </header>
 
   <!-- 开始页 -->
   <section id="screen-start" class="card">
     <div class="field">
-      <div class="field-head"><span class="badge badge-a">A</span><label for="pwd-a">A 的密码</label></div>
-      <input id="pwd-a" type="password" placeholder="A 约定的密码（至少 4 位）" autocomplete="off" spellcheck="false" maxlength="128">
+      <div class="field-head"><span class="badge badge-a">A</span><label for="pwd-a">的密码</label></div>
+      <input id="pwd-a" type="password" placeholder="至少 4 位" aria-label="A 的密码" autocomplete="off" spellcheck="false" maxlength="128">
     </div>
     <div class="field">
-      <div class="field-head"><span class="badge badge-b">B</span><label for="pwd-b">B 的密码</label></div>
-      <input id="pwd-b" type="password" placeholder="B 约定的密码（至少 4 位）" autocomplete="off" spellcheck="false" maxlength="128">
+      <div class="field-head"><span class="badge badge-b">B</span><label for="pwd-b">的密码</label></div>
+      <input id="pwd-b" type="password" placeholder="至少 4 位" aria-label="B 的密码" autocomplete="off" spellcheck="false" maxlength="128">
     </div>
     <button id="btn-start">开始碰头</button>
     <p id="start-err" class="err"></p>
     <div class="rules">
-      <p><span class="n">1</span><span>A、B 各定一个密码，互相告诉对方</span></p>
-      <p><span class="n">2</span><span>双方都填：A 框填 A 的密码，B 框填 B 的密码（填反也认得）</span></p>
-      <p><span class="n">3</span><span>消息端到端加密后只经服务器转发，服务器看不到内容</span></p>
-      <p><span class="n">4</span><span>任何一方退出，聊天立刻消失，什么也不留下</span></p>
+      <p><span class="n">1</span><span>A、B 各设一个密码，事先互相告诉</span></p>
+      <p><span class="n">2</span><span>双方都填这两个密码（A 框填 A 的、B 框填 B 的；填反也认得）</span></p>
+      <p><span class="n">3</span><span>任何一方退出，聊天立刻消失，什么也不会留下</span></p>
     </div>
     <p id="last-end" class="notice"></p>
   </section>
@@ -211,7 +210,7 @@ footer{text-align:center;color:#9aa3ba;font-size:12px;margin-top:18px}
     </form>
   </section>
 
-  <footer>端到端加密 · 消息只在内存中转发 · 不保存任何记录 · 退出即消失</footer>
+  <footer>消息只在内存中转发 · 不落盘 · 不写日志</footer>
 </div>
 
 <!-- 图片放大查看层 -->
