@@ -1,7 +1,7 @@
 {
   "name": "dsh-abba-secret-chat",
-  "version": "0.1.0",
-  "description": "AB-BA 秘密对话：装进 DeepSeek Harness 的一次性双人密码聊天，聊天页显示在右侧栏，随 DSH 关闭自动消失。 · One-off two-person password chat for DeepSeek Harness, docked in the right sidebar and gone when DSH exits.",
+  "version": "0.2.0",
+  "description": "AB-BA 秘密对话：装进 DeepSeek Harness 右侧栏的一次性双人密码聊天，端到端加密（服务器只见密文），支持图片与截屏、我/你标签，结束即彻底清理。 · One-off two-person password chat for DeepSeek Harness: end-to-end encrypted, docked in the right sidebar, images/screenshots, cleared on end.",
   "keywords": [
     "dsh",
     "dsh-plugin",
@@ -9,6 +9,8 @@
     "chat",
     "secret-chat",
     "privacy",
+    "e2e",
+    "encryption",
     "lan",
     "two-person",
     "sidebar",
@@ -39,7 +41,8 @@
     "cordis.patch.yml",
     "README.md",
     "README.zh.md",
-    "LICENSE"
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md"
   ],
   "dsh": {
     "bundle": {

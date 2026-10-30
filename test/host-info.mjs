@@ -13,6 +13,7 @@
 import http from 'node:http';
 import net from 'node:net';
 import assert from 'node:assert';
+import { readFileSync } from 'node:fs';
 
 const { apply } = await import('../lib/index.js');
 
@@ -202,7 +203,10 @@ try {
   assert.strictEqual(runningInfo.port, basePort + 1, '首选端口被占用后应回退到 port+1');
   assert.strictEqual(runningInfo.localUrl, `http://127.0.0.1:${basePort + 1}/`);
   assert.deepStrictEqual(runningInfo.lanUrls, [], '绑定 127.0.0.1 时不应展示局域网地址');
-  assert.strictEqual(runningInfo.version, '0.1.0');
+  assert.strictEqual(
+    runningInfo.version,
+    JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version,
+  );
   assert.ok(Number.isInteger(runningInfo.startedAt) && runningInfo.startedAt > 0, 'startedAt 应为毫秒时间戳');
   assert.deepStrictEqual(
     Object.keys(runningInfo).sort(),

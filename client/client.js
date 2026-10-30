@@ -896,7 +896,9 @@ window.__ModuleLoader__.load({
         src: props.src,
         title: t('toolbarTitle'),
         'data-abba-frame': '',
-        allow: 'clipboard-read; clipboard-write',
+        // display-capture：v0.2.0 的「截屏」按钮需要在 iframe 内调 getDisplayMedia；
+        // 缺这个 allow 时浏览器会直接拒绝（DSH 桌面端仍可能由宿主策略拦截，页面会给出退路提示）。
+        allow: 'clipboard-read; clipboard-write; display-capture',
         referrerPolicy: 'no-referrer',
       })
     }
