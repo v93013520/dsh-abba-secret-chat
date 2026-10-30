@@ -1,0 +1,9 @@
+# AB-BA 秘密对话 (dsh-abba-secret-chat)
+#
+# 一个双面包（dual-face）插件：Host 半启动内嵌聊天服务并在 DSH webserver 上
+# 暴露 GET /abba/info；Client 半在右侧栏注册一个聊天 tab，并在左侧栏底部加一个
+# 入口按钮。包内 main = lib/index.js，浏览器半 = client/client.js（package.json
+# 的 exports["./client"]），所以整包只需要这一行 loader 条目。
+- insert:
+    - id: abba-secret-chat
+      name: 'dsh-abba-secret-chat'

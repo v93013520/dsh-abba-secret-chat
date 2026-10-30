@@ -1,0 +1,59 @@
+{
+  "name": "dsh-abba-secret-chat",
+  "version": "0.1.0",
+  "description": "AB-BA 秘密对话：装进 DeepSeek Harness 的一次性双人密码聊天，聊天页显示在右侧栏，随 DSH 关闭自动消失。 · One-off two-person password chat for DeepSeek Harness, docked in the right sidebar and gone when DSH exits.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "chat",
+    "secret-chat",
+    "privacy",
+    "lan",
+    "two-person",
+    "sidebar",
+    "abba"
+  ],
+  "license": "MIT",
+  "author": "wangwei",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/v93013520/dsh-abba-secret-chat.git"
+  },
+  "homepage": "https://github.com/v93013520/dsh-abba-secret-chat#readme",
+  "bugs": {
+    "url": "https://github.com/v93013520/dsh-abba-secret-chat/issues"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-sidebar",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.3"
+  }
+}
